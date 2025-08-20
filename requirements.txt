@@ -1,0 +1,8 @@
+opencv-python
+numpy
+Pillow
+svgwrite
+reportlab
+svglib
+vtracer
+timm
