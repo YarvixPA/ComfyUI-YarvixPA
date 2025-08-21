@@ -4,5 +4,4 @@ Pillow
 svgwrite
 reportlab
 svglib
-vtracer
 timm
