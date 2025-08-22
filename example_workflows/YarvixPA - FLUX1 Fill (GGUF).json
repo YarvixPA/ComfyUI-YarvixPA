@@ -1,7 +1,7 @@
 {
   "id": "72001501-8f44-4415-898a-898533a11a44",
   "revision": 0,
-  "last_node_id": 504,
+  "last_node_id": 505,
   "last_link_id": 1971,
   "nodes": [
     {
@@ -82,7 +82,7 @@
         150
       ],
       "flags": {},
-      "order": 5,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -158,7 +158,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -187,7 +187,7 @@
         },
         {
           "label": "anything",
-          "name": "anything14",
+          "name": "anything17",
           "type": "*",
           "link": null
         }
@@ -202,7 +202,7 @@
           "group_restricted": 0,
           "color_restricted": 0,
           "widget_ue_connectable": {},
-          "next_input_index": 14
+          "next_input_index": 17
         }
       },
       "widgets_values": []
@@ -219,7 +219,7 @@
         460
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -275,7 +275,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -301,8 +301,8 @@
       "id": 343,
       "type": "CLIPTextEncode",
       "pos": [
-        -1550,
-        2610
+        -1560,
+        2600
       ],
       "size": [
         320,
@@ -347,8 +347,8 @@
       "id": 478,
       "type": "InpaintStitchImproved",
       "pos": [
-        -930,
-        2590
+        -940,
+        2580
       ],
       "size": [
         215.52206420898438,
@@ -393,60 +393,6 @@
       "widgets_values": []
     },
     {
-      "id": 496,
-      "type": "8c1b92d9-2622-45a1-a795-83c498d13f43",
-      "pos": [
-        -1910,
-        2290
-      ],
-      "size": [
-        390,
-        194
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1945
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            1946
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            1947
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.49",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        "FLUX1\\flux1-fill-dev-Q5_K_S.gguf",
-        "FLUX1\\clip_l.safetensors",
-        "FLUX1\\t5-v1_1-xxl-encoder-Q5_K_M.gguf",
-        "flux",
-        "FLUX1\\ae.safetensors"
-      ]
-    },
-    {
       "id": 474,
       "type": "Anything Everywhere",
       "pos": [
@@ -473,7 +419,7 @@
         },
         {
           "label": "anything",
-          "name": "anything13",
+          "name": "anything16",
           "type": "*",
           "link": null
         }
@@ -489,7 +435,7 @@
           "color_restricted": 0,
           "widget_ue_connectable": {},
           "input_regex": "target_img",
-          "next_input_index": 13
+          "next_input_index": 16
         }
       },
       "widgets_values": []
@@ -521,7 +467,7 @@
         },
         {
           "label": "anything",
-          "name": "anything13",
+          "name": "anything16",
           "type": "*",
           "link": null
         }
@@ -537,7 +483,7 @@
           "color_restricted": 0,
           "widget_ue_connectable": {},
           "input_regex": "target_mask",
-          "next_input_index": 13
+          "next_input_index": 16
         }
       },
       "widgets_values": []
@@ -554,7 +500,7 @@
         630
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -651,7 +597,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -688,8 +634,8 @@
       "id": 502,
       "type": "c4319b10-479d-48c9-a607-776fd95c9d80",
       "pos": [
-        -1190,
-        2590
+        -1200,
+        2580
       ],
       "size": [
         240,
@@ -766,15 +712,15 @@
       "id": 504,
       "type": "PrimitiveInt",
       "pos": [
-        -1500,
-        2810
+        -1510,
+        2800
       ],
       "size": [
         270,
         82
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -789,12 +735,98 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.50",
-        "Node name for S&R": "PrimitiveInt"
+        "Node name for S&R": "PrimitiveInt",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
       },
       "widgets_values": [
         0,
         "randomize"
       ]
+    },
+    {
+      "id": 496,
+      "type": "8c1b92d9-2622-45a1-a795-83c498d13f43",
+      "pos": [
+        -1910,
+        2290
+      ],
+      "size": [
+        390,
+        194
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1945
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1946
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            1947
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "FLUX1\\flux1-fill-dev-Q5_K_S.gguf",
+        "FLUX1\\clip_l.safetensors",
+        "FLUX1\\t5-v1_1-xxl-encoder-Q5_K_M.gguf",
+        "flux",
+        "FLUX1\\ae.safetensors"
+      ]
+    },
+    {
+      "id": 505,
+      "type": "MarkdownNote",
+      "pos": [
+        -1910,
+        2110
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "**(RELOD WEB PAGE IF DONT APPEAR A MODEL)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -971,8 +1003,8 @@
       "id": 7,
       "title": "GENERATION",
       "bounding": [
-        -1560,
-        2516.39990234375,
+        -1570,
+        2510,
         855.5220947265625,
         389.6000061035156
       ],
@@ -1007,7 +1039,7 @@
         },
         "revision": 0,
         "config": {},
-        "name": "Load models",
+        "name": "MODEL LOADER",
         "inputNode": {
           "id": -10,
           "bounding": [
@@ -1824,9 +1856,9 @@
               }
             ],
             "properties": {
-              "Node name for S&R": "InpaintConditioningNode",
               "cnr_id": "ComfyUI-NeuralMedia",
               "ver": "dbe5e9dd2ddb271c94fe5c011de04ef2fbc998b1",
+              "Node name for S&R": "InpaintConditioningNode",
               "widget_ue_connectable": {}
             },
             "widgets_values": [
@@ -2122,7 +2154,7 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.25.8",
+    "frontendVersion": "1.25.9",
     "ue_links": [
       {
         "downstream": 337,
@@ -2190,7 +2222,7 @@
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
-    "VHS_MetadataImage": false,
+    "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "links_added_by_ue": [
       1887,
@@ -2205,8 +2237,8 @@
     "ds": {
       "scale": 0.7513148009015777,
       "offset": [
-        2369.8570593439945,
-        -2290.608256160969
+        2310.228259343994,
+        -2069.6622561609684
       ]
     }
   },
