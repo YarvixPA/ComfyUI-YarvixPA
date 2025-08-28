@@ -51,7 +51,7 @@ class FrameCalculatorAudio:
         return (frame_rate, num_frames, audio_duration)
 
 NODE_CLASS_MAPPINGS = {
-    "FrameCalculatorAudio": AudioFrameCalculator,
+    "FrameCalculatorAudio": FrameCalculatorAudio,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
