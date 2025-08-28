@@ -1,8 +1,8 @@
 {
   "id": "72001501-8f44-4415-898a-898533a11a44",
   "revision": 0,
-  "last_node_id": 505,
-  "last_link_id": 1971,
+  "last_node_id": 508,
+  "last_link_id": 1974,
   "nodes": [
     {
       "id": 460,
@@ -16,7 +16,7 @@
         260
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -49,7 +49,7 @@
         260
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -71,143 +71,6 @@
       "widgets_values": []
     },
     {
-      "id": 337,
-      "type": "Power Lora Loader (rgthree)",
-      "pos": [
-        -1480,
-        2290
-      ],
-      "size": [
-        330,
-        150
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "model",
-          "type": "MODEL",
-          "link": 1945
-        },
-        {
-          "dir": 3,
-          "name": "clip",
-          "type": "CLIP",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "MODEL",
-          "shape": 3,
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            1386
-          ]
-        },
-        {
-          "dir": 4,
-          "name": "CLIP",
-          "shape": 3,
-          "type": "CLIP",
-          "slot_index": 1,
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "32142fe476878a354dda6e2d4b5ea98960de3ced",
-        "Show Strengths": "Single Strength",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        {},
-        {
-          "type": "PowerLoraLoaderHeaderWidget"
-        },
-        {
-          "on": true,
-          "lora": "FLUX1\\Krea-lora-rank128.safetensors",
-          "strength": 1,
-          "strengthTwo": null
-        },
-        {},
-        ""
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 426,
-      "type": "Anything Everywhere",
-      "pos": [
-        -1110,
-        2290
-      ],
-      "size": [
-        179.97518920898438,
-        86
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_on": "#B39DDB",
-          "label": "MODEL",
-          "name": "anything",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 1386
-        },
-        {
-          "color_on": "#FFD500",
-          "label": "CLIP",
-          "name": "anything2",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 1946
-        },
-        {
-          "color_on": "#FF6E6E",
-          "label": "VAE",
-          "name": "anything3",
-          "shape": 7,
-          "type": "VAE",
-          "link": 1947
-        },
-        {
-          "label": "anything",
-          "name": "anything17",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "cg-use-everywhere",
-        "ver": "0872c46d56f520f06773435f92c9bc8f7ac96ea5",
-        "Node name for S&R": "Anything Everywhere3",
-        "ue_properties": {
-          "version": "7.0.1",
-          "group_restricted": 0,
-          "color_restricted": 0,
-          "widget_ue_connectable": {},
-          "next_input_index": 17
-        }
-      },
-      "widgets_values": []
-    },
-    {
       "id": 486,
       "type": "Image Comparer (rgthree)",
       "pos": [
@@ -219,7 +82,7 @@
         460
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -275,7 +138,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -357,7 +220,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -406,7 +269,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -419,7 +282,7 @@
         },
         {
           "label": "anything",
-          "name": "anything16",
+          "name": "anything20",
           "type": "*",
           "link": null
         }
@@ -435,7 +298,7 @@
           "color_restricted": 0,
           "widget_ue_connectable": {},
           "input_regex": "target_img",
-          "next_input_index": 16
+          "next_input_index": 20
         }
       },
       "widgets_values": []
@@ -454,7 +317,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -467,7 +330,7 @@
         },
         {
           "label": "anything",
-          "name": "anything16",
+          "name": "anything20",
           "type": "*",
           "link": null
         }
@@ -483,7 +346,7 @@
           "color_restricted": 0,
           "widget_ue_connectable": {},
           "input_regex": "target_mask",
-          "next_input_index": 16
+          "next_input_index": 20
         }
       },
       "widgets_values": []
@@ -642,7 +505,7 @@
         306
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -747,6 +610,34 @@
       ]
     },
     {
+      "id": 506,
+      "type": "MarkdownNote",
+      "pos": [
+        -1910,
+        2110
+      ],
+      "size": [
+        280,
+        90
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "**(RELOAD WEB PAGE IF DONT APPEAR A MODEL)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 496,
       "type": "8c1b92d9-2622-45a1-a795-83c498d13f43",
       "pos": [
@@ -758,7 +649,7 @@
         194
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -766,7 +657,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            1945
+            1973
           ]
         },
         {
@@ -801,18 +692,153 @@
       ]
     },
     {
-      "id": 505,
+      "id": 426,
+      "type": "Anything Everywhere",
+      "pos": [
+        -900,
+        2290
+      ],
+      "size": [
+        179.97518920898438,
+        86
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_on": "#B39DDB",
+          "label": "MODEL",
+          "name": "anything",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 1386
+        },
+        {
+          "color_on": "#FFD500",
+          "label": "CLIP",
+          "name": "anything2",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 1946
+        },
+        {
+          "color_on": "#FF6E6E",
+          "label": "VAE",
+          "name": "anything3",
+          "shape": 7,
+          "type": "VAE",
+          "link": 1947
+        },
+        {
+          "label": "anything",
+          "name": "anything21",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "cg-use-everywhere",
+        "ver": "0872c46d56f520f06773435f92c9bc8f7ac96ea5",
+        "Node name for S&R": "Anything Everywhere3",
+        "ue_properties": {
+          "version": "7.0.1",
+          "group_restricted": 0,
+          "color_restricted": 0,
+          "widget_ue_connectable": {},
+          "next_input_index": 21
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 337,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        -1260,
+        2290
+      ],
+      "size": [
+        330,
+        150
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": 1974
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            1386
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "32142fe476878a354dda6e2d4b5ea98960de3ced",
+        "Show Strengths": "Single Strength",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "FLUX1\\Krea-lora-rank128.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ]
+    },
+    {
+      "id": 507,
       "type": "MarkdownNote",
       "pos": [
-        -1910,
+        -1500,
         2110
       ],
       "size": [
-        270,
+        210,
         90
       ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -823,10 +849,61 @@
         }
       },
       "widgets_values": [
-        "**(RELOD WEB PAGE IF DONT APPEAR A MODEL)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+        "**(CTRL+B TO ENABLE)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 508,
+      "type": "LazyCache",
+      "pos": [
+        -1500,
+        2290
+      ],
+      "size": [
+        210,
+        130
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1973
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1974
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.53",
+        "Node name for S&R": "LazyCache",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "reuse_threshold": true,
+            "start_percent": true,
+            "end_percent": true,
+            "verbose": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        0.2,
+        0.15,
+        0.95,
+        false
+      ]
     }
   ],
   "links": [
@@ -895,14 +972,6 @@
       "IMAGE"
     ],
     [
-      1945,
-      496,
-      0,
-      337,
-      0,
-      "MODEL"
-    ],
-    [
       1946,
       496,
       1,
@@ -957,6 +1026,22 @@
       502,
       5,
       "INT"
+    ],
+    [
+      1973,
+      496,
+      0,
+      508,
+      0,
+      "MODEL"
+    ],
+    [
+      1974,
+      508,
+      0,
+      337,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -992,7 +1077,7 @@
       "bounding": [
         -1920,
         2220,
-        999.9752197265625,
+        1209.9752197265625,
         277.6000061035156
       ],
       "color": "#3f789e",
@@ -2154,16 +2239,8 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.25.9",
+    "frontendVersion": "1.25.11",
     "ue_links": [
-      {
-        "downstream": 337,
-        "downstream_slot": 1,
-        "upstream": "496",
-        "upstream_slot": 1,
-        "controller": 426,
-        "type": "CLIP"
-      },
       {
         "downstream": 486,
         "downstream_slot": 0,
@@ -2211,6 +2288,14 @@
         "upstream_slot": 2,
         "controller": 426,
         "type": "VAE"
+      },
+      {
+        "downstream": 337,
+        "downstream_slot": 1,
+        "upstream": "496",
+        "upstream_slot": 1,
+        "controller": 426,
+        "type": "CLIP"
       }
     ],
     "groupNodes": {},
@@ -2222,7 +2307,7 @@
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
-    "VHS_MetadataImage": true,
+    "VHS_MetadataImage": false,
     "VHS_KeepIntermediate": true,
     "links_added_by_ue": [
       1887,
@@ -2235,10 +2320,10 @@
       1894
     ],
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 0.683013455365071,
       "offset": [
-        2310.228259343994,
-        -2069.6622561609684
+        2066.7000946349044,
+        -2013.6272484064236
       ]
     }
   },
