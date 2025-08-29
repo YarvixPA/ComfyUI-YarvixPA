@@ -2,7 +2,7 @@
   "id": "00c3165f-e9d8-4d8e-af1f-e6affd2ab491",
   "revision": 0,
   "last_node_id": 53,
-  "last_link_id": 49,
+  "last_link_id": 52,
   "nodes": [
     {
       "id": 27,
@@ -729,7 +729,7 @@
         },
         {
           "label": "anything",
-          "name": "anything29",
+          "name": "anything31",
           "type": "*",
           "link": null
         }
@@ -748,7 +748,7 @@
           "title_regex": null,
           "input_regex": "audio",
           "group_regex": null,
-          "next_input_index": 29
+          "next_input_index": 31
         }
       },
       "widgets_values": []
@@ -887,7 +887,7 @@
         },
         {
           "label": "anything",
-          "name": "anything26",
+          "name": "anything28",
           "type": "*",
           "link": null
         }
@@ -906,7 +906,7 @@
           "title_regex": null,
           "input_regex": "num_frames",
           "group_regex": null,
-          "next_input_index": 26
+          "next_input_index": 28
         }
       },
       "widgets_values": []
@@ -952,70 +952,6 @@
       ]
     },
     {
-      "id": 44,
-      "type": "3e92ada8-7c74-4d72-ad35-b4980359b8a6",
-      "pos": [
-        -750,
-        930
-      ],
-      "size": [
-        450,
-        214
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            39
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            24,
-            33
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": []
-        },
-        {
-          "name": "AUDIO_ENCODER",
-          "type": "AUDIO_ENCODER",
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.52",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "unet_name": true,
-            "clip_name": true,
-            "type": true,
-            "vae_name": true,
-            "audio_encoder_name": true
-          },
-          "version": "7.0.1"
-        }
-      },
-      "widgets_values": [
-        "Qwen 2SV\\Wan2.2-S2V-14B-Q3_K_S.gguf",
-        "Wan\\umt5-xxl-encoder-Q4_K_S.gguf",
-        "wan",
-        "Qwen2.1\\Wan2.1_VAE.safetensors",
-        "wav2vec2-large-xlsr-53-spanish.safetensors"
-      ]
-    },
-    {
       "id": 48,
       "type": "MarkdownNote",
       "pos": [
@@ -1027,7 +963,7 @@
         90
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1055,7 +991,7 @@
         90
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1097,7 +1033,7 @@
         },
         {
           "label": "anything",
-          "name": "anything26",
+          "name": "anything28",
           "type": "*",
           "link": null
         }
@@ -1116,7 +1052,7 @@
           "title_regex": null,
           "input_regex": "ref_image",
           "group_regex": null,
-          "next_input_index": 26
+          "next_input_index": 28
         }
       },
       "widgets_values": []
@@ -1130,7 +1066,7 @@
       ],
       "size": [
         172.18905639648438,
-        46
+        66
       ],
       "flags": {
         "collapsed": true
@@ -1147,7 +1083,7 @@
         },
         {
           "label": "anything",
-          "name": "anything24",
+          "name": "anything26",
           "type": "*",
           "link": null
         }
@@ -1166,7 +1102,7 @@
           "title_regex": null,
           "input_regex": "frame_rate",
           "group_regex": null,
-          "next_input_index": 24
+          "next_input_index": 26
         }
       },
       "widgets_values": []
@@ -1242,8 +1178,29 @@
           "link": 43
         },
         {
+          "color_on": "#FFD500",
+          "label": "CLIP",
+          "name": "anything52",
+          "type": "CLIP",
+          "link": 50
+        },
+        {
+          "color_on": "#FF6E6E",
+          "label": "VAE",
+          "name": "anything53",
+          "type": "VAE",
+          "link": 51
+        },
+        {
+          "color_on": "",
+          "label": "AUDIO_ENCODER",
+          "name": "anything54",
+          "type": "AUDIO_ENCODER",
+          "link": 52
+        },
+        {
           "label": "anything",
-          "name": "anything50",
+          "name": "anything55",
           "type": "*",
           "link": null
         }
@@ -1261,7 +1218,7 @@
           "title_regex": null,
           "input_regex": null,
           "group_regex": null,
-          "next_input_index": 50
+          "next_input_index": 55
         }
       },
       "widgets_values": []
@@ -1437,10 +1394,83 @@
       "properties": {
         "cnr_id": "ComfyUI-YarvixPA",
         "ver": "7a910c14f3d3d9ab0ee2b4a773349af356f7ce61",
-        "Node name for S&R": "FrameCalculatorAudio"
+        "Node name for S&R": "FrameCalculatorAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
       },
       "widgets_values": [
         30
+      ]
+    },
+    {
+      "id": 44,
+      "type": "3e92ada8-7c74-4d72-ad35-b4980359b8a6",
+      "pos": [
+        -750,
+        930
+      ],
+      "size": [
+        450,
+        214
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            24,
+            33,
+            50
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            51
+          ]
+        },
+        {
+          "name": "AUDIO_ENCODER",
+          "type": "AUDIO_ENCODER",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.52",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "unet_name": true,
+            "clip_name": true,
+            "type": true,
+            "vae_name": true,
+            "audio_encoder_name": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "Qwen 2SV\\Wan2.2-S2V-14B-Q3_K_S.gguf",
+        "Wan\\umt5-xxl-encoder-Q4_K_S.gguf",
+        "wan",
+        "Qwen2.1\\Wan2.1_VAE.safetensors",
+        "wav2vec2-large-xlsr-53-spanish.safetensors"
       ]
     }
   ],
@@ -1652,6 +1682,30 @@
       51,
       0,
       "FLOAT"
+    ],
+    [
+      50,
+      44,
+      1,
+      47,
+      1,
+      "CLIP"
+    ],
+    [
+      51,
+      44,
+      2,
+      47,
+      2,
+      "VAE"
+    ],
+    [
+      52,
+      44,
+      3,
+      47,
+      3,
+      "AUDIO_ENCODER"
     ]
   ],
   "groups": [
@@ -3228,6 +3282,14 @@
         "type": "MODEL"
       },
       {
+        "downstream": 34,
+        "downstream_slot": 4,
+        "upstream": "44",
+        "upstream_slot": 2,
+        "controller": 47,
+        "type": "VAE"
+      },
+      {
         "downstream": 35,
         "downstream_slot": 1,
         "upstream": "43",
@@ -3242,6 +3304,14 @@
         "upstream_slot": 0,
         "controller": 51,
         "type": "FLOAT"
+      },
+      {
+        "downstream": 37,
+        "downstream_slot": 2,
+        "upstream": "44",
+        "upstream_slot": 2,
+        "controller": 47,
+        "type": "VAE"
       },
       {
         "downstream": 37,
@@ -3261,18 +3331,34 @@
       },
       {
         "downstream": 37,
+        "downstream_slot": 10,
+        "upstream": "44",
+        "upstream_slot": 3,
+        "controller": 47,
+        "type": "AUDIO_ENCODER"
+      },
+      {
+        "downstream": 37,
         "downstream_slot": 11,
         "upstream": "43",
         "upstream_slot": 0,
         "controller": 38,
         "type": "AUDIO"
+      },
+      {
+        "downstream": 45,
+        "downstream_slot": 1,
+        "upstream": "44",
+        "upstream_slot": 1,
+        "controller": 47,
+        "type": "CLIP"
       }
     ],
     "ds": {
-      "scale": 0.3558410273836977,
+      "scale": 0.7627768444385988,
       "offset": [
-        847.2471755003526,
-        -468.98398299489054
+        836.720146021895,
+        -798.1499419340988
       ]
     },
     "frontendVersion": "1.25.11",
