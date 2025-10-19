@@ -1,7 +1,7 @@
 {
   "id": "182f8fd3-b92f-4e1c-b4c7-239acd50fb34",
   "revision": 0,
-  "last_node_id": 691,
+  "last_node_id": 692,
   "last_link_id": 3294,
   "nodes": [
     {
@@ -16,7 +16,7 @@
         300
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -51,7 +51,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -85,7 +85,7 @@
         370
       ],
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -135,7 +135,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -184,7 +184,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 18,
       "mode": 4,
       "inputs": [
         {
@@ -270,7 +270,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -494,6 +494,28 @@
         }
       ],
       "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "unet_name"
+          ],
+          [
+            "-1",
+            "clip_name1"
+          ],
+          [
+            "-1",
+            "clip_name2"
+          ],
+          [
+            "-1",
+            "type"
+          ],
+          [
+            "-1",
+            "vae_name"
+          ]
+        ],
         "cnr_id": "comfy-core",
         "ver": "0.3.49",
         "ue_properties": {
@@ -523,7 +545,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 13,
       "mode": 4,
       "inputs": [
         {
@@ -559,77 +581,6 @@
       ]
     },
     {
-      "id": 677,
-      "type": "0f69ca87-190d-4478-908f-f54633b7cb1f",
-      "pos": [
-        -1150,
-        2540
-      ],
-      "size": [
-        290,
-        170
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image1",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "unstitch",
-          "type": "UNSTITCH",
-          "links": null
-        },
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            3195,
-            3232
-          ]
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            3282,
-            3283
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.49",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        "right",
-        "green",
-        0,
-        "white"
-      ]
-    },
-    {
       "id": 678,
       "type": "LoadImage",
       "pos": [
@@ -643,7 +594,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -819,7 +770,7 @@
         282
       ],
       "flags": {},
-      "order": 13,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -868,6 +819,36 @@
         }
       ],
       "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "guidance"
+          ],
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "sampler_name"
+          ],
+          [
+            "-1",
+            "scheduler"
+          ],
+          [
+            "-1",
+            "denoise"
+          ]
+        ],
         "cnr_id": "comfy-core",
         "ver": "0.3.49",
         "ue_properties": {
@@ -899,7 +880,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 8,
+      "order": 7,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -942,7 +923,7 @@
         90
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -954,34 +935,6 @@
       },
       "widgets_values": [
         "**(CTRL+B TO ENABLE)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 690,
-      "type": "MarkdownNote",
-      "pos": [
-        -1140,
-        2050
-      ],
-      "size": [
-        280,
-        90
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.0.1"
-        }
-      },
-      "widgets_values": [
-        "**(RELOAD WEB PAGE IF DONT APPEAR A MODEL)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1035,6 +988,123 @@
         0.15,
         0.95,
         false
+      ]
+    },
+    {
+      "id": 692,
+      "type": "MarkdownNote",
+      "pos": [
+        -1150,
+        2050
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "**(R TO RELOAD LIST)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 677,
+      "type": "0f69ca87-190d-4478-908f-f54633b7cb1f",
+      "pos": [
+        -1150,
+        2540
+      ],
+      "size": [
+        290,
+        170
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "unstitch",
+          "type": "UNSTITCH",
+          "links": null
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3195,
+            3232
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            3282,
+            3283
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "direction"
+          ],
+          [
+            "-1",
+            "match_image_size"
+          ],
+          [
+            "-1",
+            "spacing_width"
+          ],
+          [
+            "-1",
+            "spacing_color"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "right",
+        "green",
+        0,
+        "white"
       ]
     }
   ],
@@ -1296,10 +1366,10 @@
             "linkIds": [
               3149
             ],
-            "pos": {
-              "0": -610,
-              "1": 2696
-            }
+            "pos": [
+              -610,
+              2696
+            ]
           },
           {
             "id": "9bfdc108-9b05-4bae-ac34-09b2058ce6ec",
@@ -1309,10 +1379,10 @@
               3150,
               3151
             ],
-            "pos": {
-              "0": -610,
-              "1": 2716
-            }
+            "pos": [
+              -610,
+              2716
+            ]
           },
           {
             "id": "27cd9e70-b81f-4c63-8370-b8a5bd661af5",
@@ -1321,10 +1391,10 @@
             "linkIds": [
               3152
             ],
-            "pos": {
-              "0": -610,
-              "1": 2736
-            }
+            "pos": [
+              -610,
+              2736
+            ]
           },
           {
             "id": "167f0dab-6f7e-4156-ae42-9cf4013156a4",
@@ -1334,10 +1404,10 @@
               3163
             ],
             "label": "refence_latent",
-            "pos": {
-              "0": -610,
-              "1": 2756
-            }
+            "pos": [
+              -610,
+              2756
+            ]
           },
           {
             "id": "a3aad18f-32c9-48f9-befb-0fd246193c84",
@@ -1346,10 +1416,10 @@
             "linkIds": [
               3164
             ],
-            "pos": {
-              "0": -610,
-              "1": 2776
-            }
+            "pos": [
+              -610,
+              2776
+            ]
           },
           {
             "id": "d9f412c5-4a01-44d9-9b21-28843c7b4167",
@@ -1358,10 +1428,10 @@
             "linkIds": [
               3165
             ],
-            "pos": {
-              "0": -610,
-              "1": 2796
-            }
+            "pos": [
+              -610,
+              2796
+            ]
           },
           {
             "id": "f27d8687-9178-4745-8e9d-6d981ffd7240",
@@ -1370,10 +1440,10 @@
             "linkIds": [
               3166
             ],
-            "pos": {
-              "0": -610,
-              "1": 2816
-            }
+            "pos": [
+              -610,
+              2816
+            ]
           },
           {
             "id": "a5c7b4d4-cbaa-412d-8758-6976af34a4ad",
@@ -1382,10 +1452,10 @@
             "linkIds": [
               3167
             ],
-            "pos": {
-              "0": -610,
-              "1": 2836
-            }
+            "pos": [
+              -610,
+              2836
+            ]
           },
           {
             "id": "e54d2771-4571-4f92-9885-7f24630c281d",
@@ -1394,10 +1464,10 @@
             "linkIds": [
               3168
             ],
-            "pos": {
-              "0": -610,
-              "1": 2856
-            }
+            "pos": [
+              -610,
+              2856
+            ]
           },
           {
             "id": "e643460d-3be6-4fb9-ab6f-e0d0f8e0aa05",
@@ -1406,10 +1476,10 @@
             "linkIds": [
               3169
             ],
-            "pos": {
-              "0": -610,
-              "1": 2876
-            }
+            "pos": [
+              -610,
+              2876
+            ]
           },
           {
             "id": "7448e5cb-d37f-4455-b145-0ac0d1d4eef5",
@@ -1418,10 +1488,10 @@
             "linkIds": [
               3170
             ],
-            "pos": {
-              "0": -610,
-              "1": 2896
-            }
+            "pos": [
+              -610,
+              2896
+            ]
           },
           {
             "id": "a891dbdc-b0fa-4697-803b-3b8c7d5d6627",
@@ -1430,10 +1500,10 @@
             "linkIds": [
               3171
             ],
-            "pos": {
-              "0": -610,
-              "1": 2916
-            }
+            "pos": [
+              -610,
+              2916
+            ]
           }
         ],
         "outputs": [
@@ -1444,10 +1514,10 @@
             "linkIds": [
               3162
             ],
-            "pos": {
-              "0": 430,
-              "1": 2736
-            }
+            "pos": [
+              430,
+              2736
+            ]
           }
         ],
         "widgets": [],
@@ -1961,10 +2031,10 @@
             "linkIds": [
               3164
             ],
-            "pos": {
-              "0": -510,
-              "1": 2340
-            }
+            "pos": [
+              -510,
+              2340
+            ]
           },
           {
             "id": "b544b011-62f9-43e5-ae34-0691f4535460",
@@ -1973,10 +2043,10 @@
             "linkIds": [
               3165
             ],
-            "pos": {
-              "0": -510,
-              "1": 2360
-            }
+            "pos": [
+              -510,
+              2360
+            ]
           },
           {
             "id": "4343b46d-e594-433b-bdf0-e349aa299614",
@@ -1985,10 +2055,10 @@
             "linkIds": [
               3166
             ],
-            "pos": {
-              "0": -510,
-              "1": 2380
-            }
+            "pos": [
+              -510,
+              2380
+            ]
           },
           {
             "id": "95bdb3d4-5364-4e70-bb06-0af62ca0a0fb",
@@ -1997,10 +2067,10 @@
             "linkIds": [
               3167
             ],
-            "pos": {
-              "0": -510,
-              "1": 2400
-            }
+            "pos": [
+              -510,
+              2400
+            ]
           },
           {
             "id": "065884da-2673-435b-ab35-2fd125dc7794",
@@ -2009,10 +2079,10 @@
             "linkIds": [
               3168
             ],
-            "pos": {
-              "0": -510,
-              "1": 2420
-            }
+            "pos": [
+              -510,
+              2420
+            ]
           }
         ],
         "outputs": [
@@ -2023,10 +2093,10 @@
             "linkIds": [
               3169
             ],
-            "pos": {
-              "0": 20,
-              "1": 2310
-            }
+            "pos": [
+              20,
+              2310
+            ]
           },
           {
             "id": "5e1b7fea-cf2e-4340-82ff-f351fa4a5311",
@@ -2035,10 +2105,10 @@
             "linkIds": [
               3170
             ],
-            "pos": {
-              "0": 20,
-              "1": 2330
-            }
+            "pos": [
+              20,
+              2330
+            ]
           },
           {
             "id": "043566bb-1e03-4fca-9b5e-2c39ca9a9b96",
@@ -2047,10 +2117,10 @@
             "linkIds": [
               3171
             ],
-            "pos": {
-              "0": 20,
-              "1": 2350
-            }
+            "pos": [
+              20,
+              2350
+            ]
           }
         ],
         "widgets": [],
@@ -2334,10 +2404,10 @@
             "linkIds": [
               3220
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2600
-            }
+            "pos": [
+              -1359.951171875,
+              2600
+            ]
           },
           {
             "id": "0a198eaa-b958-423b-b835-a305640fcdb4",
@@ -2346,10 +2416,10 @@
             "linkIds": [
               3221
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2620
-            }
+            "pos": [
+              -1359.951171875,
+              2620
+            ]
           },
           {
             "id": "60f0a80c-6dae-45e3-a272-99d14bbd68a8",
@@ -2358,10 +2428,10 @@
             "linkIds": [
               3222
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2640
-            }
+            "pos": [
+              -1359.951171875,
+              2640
+            ]
           },
           {
             "id": "391fcaad-8138-4785-8bbf-db2430a3be43",
@@ -2370,10 +2440,10 @@
             "linkIds": [
               3223
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2660
-            }
+            "pos": [
+              -1359.951171875,
+              2660
+            ]
           },
           {
             "id": "063cae1d-f611-4b62-9a32-827784ac8383",
@@ -2382,10 +2452,10 @@
             "linkIds": [
               3224
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2680
-            }
+            "pos": [
+              -1359.951171875,
+              2680
+            ]
           },
           {
             "id": "e8995971-7a8e-40cf-a735-4f0dacbc0c78",
@@ -2394,10 +2464,10 @@
             "linkIds": [
               3225
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2700
-            }
+            "pos": [
+              -1359.951171875,
+              2700
+            ]
           },
           {
             "id": "1877a104-3fc9-4d9c-87a6-dee49c244d87",
@@ -2406,10 +2476,10 @@
             "linkIds": [
               3226
             ],
-            "pos": {
-              "0": -1359.951171875,
-              "1": 2720
-            }
+            "pos": [
+              -1359.951171875,
+              2720
+            ]
           }
         ],
         "outputs": [
@@ -2420,10 +2490,10 @@
             "linkIds": [
               3208
             ],
-            "pos": {
-              "0": -650,
-              "1": 2590
-            }
+            "pos": [
+              -650,
+              2590
+            ]
           },
           {
             "id": "0f055603-63a6-4849-a226-62ec7b1ced9d",
@@ -2432,10 +2502,10 @@
             "linkIds": [
               3211
             ],
-            "pos": {
-              "0": -650,
-              "1": 2610
-            }
+            "pos": [
+              -650,
+              2610
+            ]
           },
           {
             "id": "253c35f4-590f-4abf-82b2-cc9f5a329a83",
@@ -2444,10 +2514,10 @@
             "linkIds": [
               3227
             ],
-            "pos": {
-              "0": -650,
-              "1": 2630
-            }
+            "pos": [
+              -650,
+              2630
+            ]
           }
         ],
         "widgets": [],
@@ -2703,13 +2773,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6303940863128722,
+      "scale": 0.6303940863128723,
       "offset": [
-        1598.2663582357675,
-        -2004.9887349442815
+        1679.9594993136152,
+        -1969.7186250338293
       ]
     },
-    "frontendVersion": "1.25.11",
+    "frontendVersion": "1.28.7",
     "ue_links": [
       {
         "downstream": 506,
@@ -2718,22 +2788,6 @@
         "upstream_slot": 1,
         "controller": 426,
         "type": "CLIP"
-      },
-      {
-        "downstream": 677,
-        "downstream_slot": 0,
-        "upstream": "683",
-        "upstream_slot": 0,
-        "controller": 473,
-        "type": "IMAGE"
-      },
-      {
-        "downstream": 677,
-        "downstream_slot": 6,
-        "upstream": "675",
-        "upstream_slot": 2,
-        "controller": 426,
-        "type": "VAE"
       },
       {
         "downstream": 657,
@@ -2758,6 +2812,22 @@
         "upstream_slot": 2,
         "controller": 426,
         "type": "VAE"
+      },
+      {
+        "downstream": 677,
+        "downstream_slot": 0,
+        "upstream": "683",
+        "upstream_slot": 0,
+        "controller": 473,
+        "type": "IMAGE"
+      },
+      {
+        "downstream": 677,
+        "downstream_slot": 6,
+        "upstream": "675",
+        "upstream_slot": 2,
+        "controller": 426,
+        "type": "VAE"
       }
     ],
     "groupNodes": {},
@@ -2769,7 +2839,7 @@
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
-    "VHS_MetadataImage": false,
+    "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "links_added_by_ue": [
       3284,

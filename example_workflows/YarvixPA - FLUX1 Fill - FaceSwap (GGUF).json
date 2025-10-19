@@ -1,8 +1,8 @@
 {
   "id": "5af48cd7-3fdb-4550-8f84-7cfbc3455d65",
   "revision": 0,
-  "last_node_id": 501,
-  "last_link_id": 1803,
+  "last_node_id": 504,
+  "last_link_id": 1806,
   "nodes": [
     {
       "id": 473,
@@ -64,7 +64,7 @@
         370
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -120,7 +120,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -154,7 +154,7 @@
         280
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -187,7 +187,7 @@
         280
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -216,11 +216,11 @@
         2960
       ],
       "size": [
-        227.97030639648438,
+        227.9703125,
         98
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -274,11 +274,11 @@
         2980
       ],
       "size": [
-        215.52206420898438,
+        215.5220703125,
         46
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -325,7 +325,7 @@
         280
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -358,7 +358,7 @@
         280
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -486,7 +486,7 @@
         190
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -557,57 +557,6 @@
       ]
     },
     {
-      "id": 425,
-      "type": "TeaCache",
-      "pos": [
-        -1040,
-        2160
-      ],
-      "size": [
-        210,
-        154
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1793
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            1385
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "teacache",
-        "ver": "4bca908bf53b029ea5739cb69ef2a9e6c06e6752",
-        "Node name for S&R": "TeaCache",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        "flux",
-        0.4,
-        0,
-        1,
-        "cuda"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 426,
       "type": "Anything Everywhere",
       "pos": [
@@ -621,7 +570,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -682,14 +631,14 @@
         166
       ],
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
           "dir": 3,
           "name": "model",
           "type": "MODEL",
-          "link": 1385
+          "link": 1806
         },
         {
           "dir": 3,
@@ -848,7 +797,7 @@
         282
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -895,6 +844,36 @@
         }
       ],
       "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "noise_mask"
+          ],
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "sampler_name"
+          ],
+          [
+            "-1",
+            "scheduler"
+          ],
+          [
+            "-1",
+            "denoise"
+          ]
+        ],
         "cnr_id": "comfy-core",
         "ver": "0.3.49",
         "ue_properties": {
@@ -911,88 +890,6 @@
         "normal",
         0.9000000000000001
       ]
-    },
-    {
-      "id": 490,
-      "type": "8cb0d02c-457e-468c-8cea-606f3ed30875",
-      "pos": [
-        -1470,
-        2160
-      ],
-      "size": [
-        380,
-        194
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1793
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            1794
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            1795
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.49",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        "FLUX1\\flux1-fill-dev-Q5_K_S.gguf",
-        "FLUX1\\clip_l.safetensors",
-        "FLUX1\\t5-v1_1-xxl-encoder-Q6_K.gguf",
-        "flux",
-        "FLUX1\\ae.safetensors"
-      ]
-    },
-    {
-      "id": 499,
-      "type": "MarkdownNote",
-      "pos": [
-        -1470,
-        1990
-      ],
-      "size": [
-        270,
-        90
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.0.1"
-        }
-      },
-      "widgets_values": [
-        "**(RELOD WEB PAGE IF DONT APPEAR A MODEL)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 500,
@@ -1029,7 +926,12 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.51",
-        "Node name for S&R": "ImageScaleToTotalPixels"
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
       },
       "widgets_values": [
         "lanczos",
@@ -1146,7 +1048,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1193,7 +1095,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1223,6 +1125,189 @@
         "example.png",
         "image"
       ]
+    },
+    {
+      "id": 490,
+      "type": "8cb0d02c-457e-468c-8cea-606f3ed30875",
+      "pos": [
+        -1470,
+        2160
+      ],
+      "size": [
+        380,
+        194
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1805
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1794
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            1795
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "unet_name"
+          ],
+          [
+            "-1",
+            "clip_name1"
+          ],
+          [
+            "-1",
+            "clip_name2"
+          ],
+          [
+            "-1",
+            "type"
+          ],
+          [
+            "-1",
+            "vae_name"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "FLUX1\\flux1-fill-dev-Q5_K_S.gguf",
+        "FLUX1\\clip_l.safetensors",
+        "FLUX1\\t5-v1_1-xxl-encoder-Q6_K.gguf",
+        "flux",
+        "FLUX1\\ae.safetensors"
+      ]
+    },
+    {
+      "id": 502,
+      "type": "LazyCache",
+      "pos": [
+        -1040,
+        2160
+      ],
+      "size": [
+        210,
+        130
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1805
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1806
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.53",
+        "Node name for S&R": "LazyCache",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "reuse_threshold": true,
+            "start_percent": true,
+            "end_percent": true,
+            "verbose": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        0.2,
+        0.15,
+        0.95,
+        false
+      ]
+    },
+    {
+      "id": 504,
+      "type": "MarkdownNote",
+      "pos": [
+        -1480,
+        1980
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "**(R TO RELOAD LIST)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 503,
+      "type": "MarkdownNote",
+      "pos": [
+        -1020,
+        1980
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "**(CTRL+B TO ENABLE)**\n\n⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1307,14 +1392,6 @@
       "IMAGE"
     ],
     [
-      1385,
-      425,
-      0,
-      337,
-      0,
-      "MODEL"
-    ],
-    [
       1386,
       337,
       0,
@@ -1371,14 +1448,6 @@
       "MASK"
     ],
     [
-      1793,
-      490,
-      0,
-      425,
-      0,
-      "MODEL"
-    ],
-    [
       1794,
       490,
       1,
@@ -1433,6 +1502,22 @@
       473,
       0,
       "IMAGE"
+    ],
+    [
+      1805,
+      490,
+      0,
+      502,
+      0,
+      "MODEL"
+    ],
+    [
+      1806,
+      502,
+      0,
+      337,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1582,10 +1667,10 @@
               1766
             ],
             "localized_name": "model",
-            "pos": {
-              "0": -1080,
-              "1": 2656
-            }
+            "pos": [
+              -1080,
+              2656
+            ]
           },
           {
             "id": "79eea933-3b4c-4777-92bb-6eb555c83a0e",
@@ -1595,10 +1680,10 @@
               1771,
               1772
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2676
-            }
+            "pos": [
+              -1080,
+              2676
+            ]
           },
           {
             "id": "92bf47a6-551d-4a04-86cb-62b1d2ddcb1e",
@@ -1608,10 +1693,10 @@
               1773,
               1783
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2696
-            }
+            "pos": [
+              -1080,
+              2696
+            ]
           },
           {
             "id": "3e55da78-7ee4-4d69-b482-6530a2cf69dd",
@@ -1620,10 +1705,10 @@
             "linkIds": [
               1774
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2716
-            }
+            "pos": [
+              -1080,
+              2716
+            ]
           },
           {
             "id": "a8443df4-de80-4ad7-85e5-2ddb6203b3a6",
@@ -1632,10 +1717,10 @@
             "linkIds": [
               1775
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2736
-            }
+            "pos": [
+              -1080,
+              2736
+            ]
           },
           {
             "id": "48e9020c-b451-4f64-8bb9-754f1bfd931b",
@@ -1644,10 +1729,10 @@
             "linkIds": [
               1776
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2756
-            }
+            "pos": [
+              -1080,
+              2756
+            ]
           },
           {
             "id": "0922da56-2f28-47d6-b542-924ac1020c03",
@@ -1656,10 +1741,10 @@
             "linkIds": [
               1777
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2776
-            }
+            "pos": [
+              -1080,
+              2776
+            ]
           },
           {
             "id": "9ed22438-1ffa-41cf-ad28-d15bb62cf528",
@@ -1668,10 +1753,10 @@
             "linkIds": [
               1778
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2796
-            }
+            "pos": [
+              -1080,
+              2796
+            ]
           },
           {
             "id": "b7b04c48-b9e8-42b8-b152-ccee95db6751",
@@ -1680,10 +1765,10 @@
             "linkIds": [
               1779
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2816
-            }
+            "pos": [
+              -1080,
+              2816
+            ]
           },
           {
             "id": "06e51e34-7653-4e4d-99b2-b81a95753d59",
@@ -1692,10 +1777,10 @@
             "linkIds": [
               1780
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2836
-            }
+            "pos": [
+              -1080,
+              2836
+            ]
           },
           {
             "id": "fbadfcb1-24e5-4f3c-8a5d-a645d123dc62",
@@ -1704,10 +1789,10 @@
             "linkIds": [
               1781
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2856
-            }
+            "pos": [
+              -1080,
+              2856
+            ]
           },
           {
             "id": "c41cbe18-14f8-4658-938c-9bc0b71eeb19",
@@ -1716,10 +1801,10 @@
             "linkIds": [
               1782
             ],
-            "pos": {
-              "0": -1080,
-              "1": 2876
-            }
+            "pos": [
+              -1080,
+              2876
+            ]
           }
         ],
         "outputs": [
@@ -1731,10 +1816,10 @@
               1111
             ],
             "localized_name": "IMAGE",
-            "pos": {
-              "0": 31.812103271484375,
-              "1": 2696
-            }
+            "pos": [
+              31.812103271484375,
+              2696
+            ]
           }
         ],
         "widgets": [],
@@ -2306,10 +2391,10 @@
             "linkIds": [
               1788
             ],
-            "pos": {
-              "0": -1410,
-              "1": 2299
-            }
+            "pos": [
+              -1410,
+              2299
+            ]
           },
           {
             "id": "47ab97c9-1631-46be-adb6-f3fa180964f7",
@@ -2318,10 +2403,10 @@
             "linkIds": [
               1789
             ],
-            "pos": {
-              "0": -1410,
-              "1": 2319
-            }
+            "pos": [
+              -1410,
+              2319
+            ]
           },
           {
             "id": "0b71dddc-7469-4181-9a98-0a965668f8f6",
@@ -2330,10 +2415,10 @@
             "linkIds": [
               1790
             ],
-            "pos": {
-              "0": -1410,
-              "1": 2339
-            }
+            "pos": [
+              -1410,
+              2339
+            ]
           },
           {
             "id": "861728e7-1906-435a-a22c-041f8a135f10",
@@ -2342,10 +2427,10 @@
             "linkIds": [
               1791
             ],
-            "pos": {
-              "0": -1410,
-              "1": 2359
-            }
+            "pos": [
+              -1410,
+              2359
+            ]
           },
           {
             "id": "096d305e-2a99-4e79-833d-b38cee16c353",
@@ -2354,10 +2439,10 @@
             "linkIds": [
               1792
             ],
-            "pos": {
-              "0": -1410,
-              "1": 2379
-            }
+            "pos": [
+              -1410,
+              2379
+            ]
           }
         ],
         "outputs": [
@@ -2369,10 +2454,10 @@
               1384
             ],
             "localized_name": "MODEL",
-            "pos": {
-              "0": -880,
-              "1": 2269
-            }
+            "pos": [
+              -880,
+              2269
+            ]
           },
           {
             "id": "e0e13d33-d859-4917-905d-7aaae335c23a",
@@ -2381,10 +2466,10 @@
             "linkIds": [
               1793
             ],
-            "pos": {
-              "0": -880,
-              "1": 2289
-            }
+            "pos": [
+              -880,
+              2289
+            ]
           },
           {
             "id": "9c2b9d14-54d8-4d1e-8959-4d27cd2378e1",
@@ -2393,10 +2478,10 @@
             "linkIds": [
               1794
             ],
-            "pos": {
-              "0": -880,
-              "1": 2309
-            }
+            "pos": [
+              -880,
+              2309
+            ]
           }
         ],
         "widgets": [],
@@ -2643,13 +2728,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6209213230591554,
+      "scale": 1,
       "offset": [
-        1650.323513840394,
-        -2086.939473856886
+        1533.9105529763822,
+        -1884.708978004145
       ]
     },
-    "frontendVersion": "1.25.9",
+    "frontendVersion": "1.28.7",
     "ue_links": [
       {
         "downstream": 488,
