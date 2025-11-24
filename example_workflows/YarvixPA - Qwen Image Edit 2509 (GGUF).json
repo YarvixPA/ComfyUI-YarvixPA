@@ -1,8 +1,8 @@
 {
   "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
   "revision": 0,
-  "last_node_id": 146,
-  "last_link_id": 487,
+  "last_node_id": 147,
+  "last_link_id": 507,
   "nodes": [
     {
       "id": 60,
@@ -18,7 +18,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -60,7 +60,7 @@
         460
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -166,7 +166,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -218,7 +218,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -272,7 +272,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -462,7 +462,7 @@
         142
       ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -532,7 +532,7 @@
         282
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -716,6 +716,175 @@
       "bgcolor": "#653"
     },
     {
+      "id": 133,
+      "type": "Get resolution [Crystools]",
+      "pos": [
+        490,
+        960
+      ],
+      "size": [
+        150.1705078125,
+        96
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            419
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            420
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-Crystools",
+        "ver": "2af9ccf0a29c6910e6fcbdd7d2fe96f9bde44eed",
+        "Node name for S&R": "Get resolution [Crystools]",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 137,
+      "type": "2151a33e-b486-4ec1-8876-5951c2e80e94",
+      "pos": [
+        -280,
+        460
+      ],
+      "size": [
+        250,
+        360
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            499
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "upscale_method"
+          ],
+          [
+            "-1",
+            "megapixels"
+          ],
+          [
+            "128",
+            "image"
+          ],
+          [
+            "128",
+            "upload"
+          ],
+          [
+            "128",
+            "$$canvas-image-preview"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
+      "id": 138,
+      "type": "dbf20119-8e2a-4d15-88dd-2457cf9ca3b6",
+      "pos": [
+        0,
+        460
+      ],
+      "size": [
+        250,
+        360
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            500
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "upscale_method"
+          ],
+          [
+            "-1",
+            "megapixels"
+          ],
+          [
+            "128",
+            "image"
+          ],
+          [
+            "128",
+            "upload"
+          ],
+          [
+            "128",
+            "$$canvas-image-preview"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1
+      ]
+    },
+    {
       "id": 135,
       "type": "be2632b3-02cc-4567-807d-c73fe88ef2cb",
       "pos": [
@@ -727,7 +896,7 @@
         460
       ],
       "flags": {},
-      "order": 4,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -806,15 +975,19 @@
         250,
         360
       ],
-      "flags": {},
-      "order": 5,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": null
+          "links": [
+            498
+          ]
         }
       ],
       "properties": {
@@ -854,55 +1027,6 @@
       ]
     },
     {
-      "id": 133,
-      "type": "Get resolution [Crystools]",
-      "pos": [
-        490,
-        960
-      ],
-      "size": [
-        150.1705078125,
-        96
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            419
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            420
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-Crystools",
-        "ver": "2af9ccf0a29c6910e6fcbdd7d2fe96f9bde44eed",
-        "Node name for S&R": "Get resolution [Crystools]",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.2.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": []
-    },
-    {
       "id": 142,
       "type": "Fast Groups Bypasser (rgthree)",
       "pos": [
@@ -914,7 +1038,7 @@
         106
       ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -940,120 +1064,73 @@
       }
     },
     {
-      "id": 137,
-      "type": "2151a33e-b486-4ec1-8876-5951c2e80e94",
+      "id": 147,
+      "type": "Anything Everywhere",
       "pos": [
-        -280,
-        460
+        -240,
+        890
       ],
       "size": [
-        250,
-        360
+        172.1890625,
+        86
       ],
-      "flags": {},
-      "order": 8,
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "IMAGE",
+          "color_on": "#64B5F6",
+          "label": "image1",
+          "name": "anything",
+          "shape": 7,
           "type": "IMAGE",
-          "links": null
+          "link": 498
+        },
+        {
+          "color_on": "#64B5F6",
+          "label": "image2",
+          "name": "anything11",
+          "type": "IMAGE",
+          "link": 499
+        },
+        {
+          "color_on": "#64B5F6",
+          "label": "image3",
+          "name": "anything12",
+          "type": "IMAGE",
+          "link": 500
+        },
+        {
+          "label": "anything",
+          "name": "anything13",
+          "type": "*",
+          "link": null
         }
       ],
+      "outputs": [],
       "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "upscale_method"
-          ],
-          [
-            "-1",
-            "megapixels"
-          ],
-          [
-            "128",
-            "image"
-          ],
-          [
-            "128",
-            "upload"
-          ],
-          [
-            "128",
-            "$$canvas-image-preview"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.3.71",
         "ue_properties": {
+          "version": "7.5.1",
+          "group_restricted": 0,
+          "color_restricted": 0,
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
-          "version": "7.5.1"
-        }
-      },
-      "widgets_values": [
-        "lanczos",
-        1
-      ]
-    },
-    {
-      "id": 138,
-      "type": "dbf20119-8e2a-4d15-88dd-2457cf9ca3b6",
-      "pos": [
-        0,
-        460
-      ],
-      "size": [
-        250,
-        360
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "upscale_method"
-          ],
-          [
-            "-1",
-            "megapixels"
-          ],
-          [
-            "128",
-            "image"
-          ],
-          [
-            "128",
-            "upload"
-          ],
-          [
-            "128",
-            "$$canvas-image-preview"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.3.71",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.1"
-        }
-      },
-      "widgets_values": [
-        "lanczos",
-        1
-      ]
+          "title_regex": null,
+          "input_regex": null,
+          "group_regex": null,
+          "title_regex_invert": false,
+          "input_regex_invert": false,
+          "group_regex_invert": false,
+          "repeated_type_rule": 0,
+          "string_to_combo": 0,
+          "next_input_index": 13
+        },
+        "cnr_id": "cg-use-everywhere",
+        "ver": "4c28e84beaeb27b0b1c91764826b5b7e79eba390",
+        "Node name for S&R": "Anything Everywhere"
+      }
     }
   ],
   "links": [
@@ -1168,6 +1245,30 @@
       108,
       2,
       "CONDITIONING"
+    ],
+    [
+      498,
+      136,
+      0,
+      147,
+      0,
+      "IMAGE"
+    ],
+    [
+      499,
+      137,
+      0,
+      147,
+      1,
+      "IMAGE"
+    ],
+    [
+      500,
+      138,
+      0,
+      147,
+      2,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1435,10 +1536,10 @@
               }
             ],
             "properties": {
-              "aux_id": "YarvixPA/ComfyUI-GGUF",
+              "cnr_id": "ComfyUI-GGUF",
               "ver": "d247022e3fa66851c5084cc251b076aab816423d",
               "Node name for S&R": "UnetLoaderGGUF",
-              "cnr_id": "ComfyUI-GGUF",
+              "aux_id": "YarvixPA/ComfyUI-GGUF",
               "ue_properties": {
                 "widget_ue_connectable": {
                   "unet_name": true
@@ -1499,10 +1600,10 @@
               }
             ],
             "properties": {
-              "aux_id": "YarvixPA/ComfyUI-GGUF",
+              "cnr_id": "ComfyUI-GGUF",
               "ver": "d247022e3fa66851c5084cc251b076aab816423d",
               "Node name for S&R": "CLIPLoaderGGUF",
-              "cnr_id": "ComfyUI-GGUF",
+              "aux_id": "YarvixPA/ComfyUI-GGUF",
               "ue_properties": {
                 "widget_ue_connectable": {
                   "clip_name": true,
@@ -2336,7 +2437,7 @@
               }
             },
             "widgets_values": [
-              ""
+              "change the style of this image to a realism style"
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -2520,7 +2621,8 @@
           }
         ],
         "extra": {
-          "ue_links": []
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       },
       {
@@ -2763,7 +2865,8 @@
           }
         ],
         "extra": {
-          "ue_links": []
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       },
       {
@@ -2851,7 +2954,7 @@
             ],
             "flags": {},
             "order": 0,
-            "mode": 0,
+            "mode": 4,
             "inputs": [],
             "outputs": [
               {
@@ -2907,7 +3010,7 @@
             ],
             "flags": {},
             "order": 1,
-            "mode": 0,
+            "mode": 4,
             "inputs": [
               {
                 "localized_name": "image",
@@ -3006,7 +3109,8 @@
           }
         ],
         "extra": {
-          "ue_links": []
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       },
       {
@@ -3094,7 +3198,7 @@
             ],
             "flags": {},
             "order": 0,
-            "mode": 0,
+            "mode": 4,
             "inputs": [],
             "outputs": [
               {
@@ -3150,7 +3254,7 @@
             ],
             "flags": {},
             "order": 1,
-            "mode": 0,
+            "mode": 4,
             "inputs": [
               {
                 "localized_name": "image",
@@ -3249,7 +3353,8 @@
           }
         ],
         "extra": {
-          "ue_links": []
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       }
     ]
@@ -3283,6 +3388,14 @@
         "type": "VAE"
       },
       {
+        "downstream": 133,
+        "downstream_slot": 0,
+        "upstream": "136",
+        "upstream_slot": 0,
+        "controller": 147,
+        "type": "IMAGE"
+      },
+      {
         "downstream": 135,
         "downstream_slot": 0,
         "upstream": "105",
@@ -3297,26 +3410,34 @@
         "upstream_slot": 2,
         "controller": 103,
         "type": "VAE"
+      },
+      {
+        "downstream": 135,
+        "downstream_slot": 2,
+        "upstream": "136",
+        "upstream_slot": 0,
+        "controller": 147,
+        "type": "IMAGE"
       }
     ],
     "links_added_by_ue": [
-      458,
-      459,
-      460,
-      461,
-      462,
-      463,
-      464
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507
     ],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.8032573283450711,
+      "scale": 0.6638490316901418,
       "offset": [
-        1067.7445596361013,
-        67.34999228177495
+        1019.2267162901401,
+        53.51526165662594
       ]
     }
   },
