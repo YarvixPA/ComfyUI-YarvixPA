@@ -2,7 +2,7 @@
   "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
   "revision": 0,
   "last_node_id": 147,
-  "last_link_id": 507,
+  "last_link_id": 522,
   "nodes": [
     {
       "id": 60,
@@ -46,59 +46,6 @@
       },
       "widgets_values": [
         "ComfyUI"
-      ]
-    },
-    {
-      "id": 112,
-      "type": "Image Comparer (rgthree)",
-      "pos": [
-        1290,
-        490
-      ],
-      "size": [
-        460,
-        460
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "dir": 3,
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 244
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "110e4ef1dbf2ea20ec39ae5a737bd5e56d4e54c2",
-        "comparer_mode": "Slide",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.0.1"
-        }
-      },
-      "widgets_values": [
-        [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_caypd_00003_.png&type=temp&subfolder=&rand=0.5703445331466407"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_caypd_00004_.png&type=temp&subfolder=&rand=0.26310869607469767"
-          }
-        ]
       ]
     },
     {
@@ -518,112 +465,6 @@
         },
         {},
         ""
-      ]
-    },
-    {
-      "id": 108,
-      "type": "41e8539a-f855-4fbd-ac0a-ace8218542ef",
-      "pos": [
-        980,
-        430
-      ],
-      "size": [
-        270,
-        282
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": null
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 479
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 480
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 421
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            225,
-            244
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "seed"
-          ],
-          [
-            "3",
-            "control_after_generate"
-          ],
-          [
-            "-1",
-            "steps"
-          ],
-          [
-            "-1",
-            "cfg"
-          ],
-          [
-            "-1",
-            "sampler_name"
-          ],
-          [
-            "-1",
-            "scheduler"
-          ],
-          [
-            "-1",
-            "denoise"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.3.51",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "seed": true,
-            "steps": true,
-            "cfg": true,
-            "sampler_name": true,
-            "scheduler": true,
-            "denoise": true
-          },
-          "version": "7.0.1"
-        }
-      },
-      "widgets_values": [
-        976480016588017,
-        null,
-        4,
-        1,
-        "euler",
-        "simple",
-        1
       ]
     },
     {
@@ -1111,6 +952,9 @@
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "cg-use-everywhere",
+        "ver": "4c28e84beaeb27b0b1c91764826b5b7e79eba390",
+        "Node name for S&R": "Anything Everywhere",
         "ue_properties": {
           "version": "7.5.1",
           "group_restricted": 0,
@@ -1126,11 +970,169 @@
           "repeated_type_rule": 0,
           "string_to_combo": 0,
           "next_input_index": 13
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 112,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        1290,
+        490
+      ],
+      "size": [
+        460,
+        460
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "image1",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": null
         },
-        "cnr_id": "cg-use-everywhere",
-        "ver": "4c28e84beaeb27b0b1c91764826b5b7e79eba390",
-        "Node name for S&R": "Anything Everywhere"
-      }
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 244
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "110e4ef1dbf2ea20ec39ae5a737bd5e56d4e54c2",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_uepxd_00002_.png&type=temp&subfolder=&rand=0.44244351231699586"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_uepxd_00003_.png&type=temp&subfolder=&rand=0.16421966724709458"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 108,
+      "type": "41e8539a-f855-4fbd-ac0a-ace8218542ef",
+      "pos": [
+        980,
+        430
+      ],
+      "size": [
+        270,
+        282
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 479
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 480
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 421
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            225,
+            244
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "3",
+            "control_after_generate"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "sampler_name"
+          ],
+          [
+            "-1",
+            "scheduler"
+          ],
+          [
+            "-1",
+            "denoise"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true
+          },
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        976480016588017,
+        null,
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
     }
   ],
   "links": [
@@ -3372,22 +3374,6 @@
         "type": "CLIP"
       },
       {
-        "downstream": 108,
-        "downstream_slot": 0,
-        "upstream": "75",
-        "upstream_slot": 0,
-        "controller": 103,
-        "type": "MODEL"
-      },
-      {
-        "downstream": 108,
-        "downstream_slot": 10,
-        "upstream": "105",
-        "upstream_slot": 2,
-        "controller": 103,
-        "type": "VAE"
-      },
-      {
         "downstream": 133,
         "downstream_slot": 0,
         "upstream": "136",
@@ -3418,26 +3404,51 @@
         "upstream_slot": 0,
         "controller": 147,
         "type": "IMAGE"
+      },
+      {
+        "downstream": 112,
+        "downstream_slot": 0,
+        "upstream": "136",
+        "upstream_slot": 0,
+        "controller": 147,
+        "type": "IMAGE"
+      },
+      {
+        "downstream": 108,
+        "downstream_slot": 0,
+        "upstream": "75",
+        "upstream_slot": 0,
+        "controller": 103,
+        "type": "MODEL"
+      },
+      {
+        "downstream": 108,
+        "downstream_slot": 10,
+        "upstream": "105",
+        "upstream_slot": 2,
+        "controller": 103,
+        "type": "VAE"
       }
     ],
     "links_added_by_ue": [
-      501,
-      502,
-      503,
-      504,
-      505,
-      506,
-      507
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522
     ],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.6638490316901418,
+      "scale": 0.7302339348591571,
       "offset": [
-        1019.2267162901401,
-        53.51526165662594
+        312.5265481833113,
+        117.03864864025603
       ]
     }
   },
