@@ -6,8 +6,8 @@ class GetResolutionImage:
     Displays the resolution (width and height) of an image.
     Outputs:
       - image (IMAGE, passthrough)
-      - height (INT)
       - width (INT)
+      - height (INT)
 
     Also sends formatted text to the frontend so the JS widget
     can display the values inside the node UI.
@@ -24,9 +24,9 @@ class GetResolutionImage:
             }
         }
 
-    # Returns: image, height, width
+    # Returns: image, width, height
     RETURN_TYPES = ("IMAGE", "INT", "INT")
-    RETURN_NAMES = ("image", "height", "width")
+    RETURN_NAMES = ("image", "width", "height")
     FUNCTION = "execute"
     CATEGORY = "ComfyUI-YarvixPA/Utils/Image"
     DESCRIPTION = "🚀 Displays the resolution (width and height) of an image."
@@ -70,7 +70,8 @@ class GetResolutionImage:
             display_text = f"ERROR getting resolution:\n{e}"
             print(f"[GetImageResolution] {display_text}")
 
-        result = (image, H, W)
+        # Nuevo orden: (image, width, height)
+        result = (image, W, H)
 
         return {
             "ui": {
