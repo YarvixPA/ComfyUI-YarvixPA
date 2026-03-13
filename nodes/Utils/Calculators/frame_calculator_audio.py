@@ -1,16 +1,11 @@
-import torch
-
-
 class FrameCalculatorAudio:
     """
     Calculates the number of frames based on audio duration and FPS.
     Exposes:
-      - frame_rate (FLOAT)
-      - num_frames (INT)
+      - frame_rate     (FLOAT) — e.g. 29.97, 24.0
+      - frame_rate_int (INT)   — rounded, e.g. 30, 24
+      - frames_number     (INT)
       - audio_duration (STRING, HH:MM:SS)
-
-    Also sends a formatted text to the frontend so the JS widget
-    can display all three values inside the node UI.
     """
 
     def __init__(self):
@@ -20,22 +15,19 @@ class FrameCalculatorAudio:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "fps": ("FLOAT", {"default": 30.0, "min": 1.0, "max": 480.0, "step": 0.1},),
+                "fps": ("FLOAT", {"default": 30.0, "min": 1.0, "max": 480.0, "step": 0.1}),
                 "audio": ("AUDIO",),
             }
         }
 
-    # Returns 3 values: frame_rate, num_frames and audio_duration
-    RETURN_TYPES = ("FLOAT", "INT", "STRING")
-    RETURN_NAMES = ("frame_rate", "num_frames", "audio_duration")
+    RETURN_TYPES = ("FLOAT", "INT", "INT", "STRING")
+    RETURN_NAMES = ("frame_rate", "frame_rate_int", "frames_number", "audio_duration")
     FUNCTION = "execute"
     CATEGORY = "ComfyUI-YarvixPA/Utils/Calculators"
     DESCRIPTION = "🚀 Calculates the number of frames based on the audio and FPS."
-    OUTPUT_NODE = True  # Ensures the node runs even if nothing is connected
+    OUTPUT_NODE = True
 
     def execute(self, audio, fps=30.0):
-        fps = float(fps)
-
         if not isinstance(audio, dict):
             raise ValueError(
                 "Invalid 'audio' input: expected a dictionary with 'waveform' and 'sample_rate'."
@@ -53,27 +45,26 @@ class FrameCalculatorAudio:
         num_samples = int(waveform.shape[-1])
         duration_seconds = num_samples / float(sample_rate)
 
-        frame_rate = fps
-        num_frames = int(round(frame_rate * duration_seconds))
+        frame_rate = float(fps)
+        frame_rate_int = int(round(frame_rate))
+        frames_number = int(round(frame_rate * duration_seconds))
 
-        # Conversion to HH:MM:SS (using floor instead of round)
-        total_seconds = int(duration_seconds)  # truncated
+        # Convert to HH:MM:SS (using floor)
+        total_seconds = int(duration_seconds)
         hours = total_seconds // 3600
         minutes = (total_seconds % 3600) // 60
         seconds = total_seconds % 60
         audio_duration = f"{hours:02}:{minutes:02}:{seconds:02}"
 
-        # Text that will be shown in the JS widget
+        # Text for the JS widget
         display_text = (
-            f"Frame rate: {frame_rate:.2f} fps\n"
-            f"Number of frames: {num_frames}\n"
+            f"Frame rate: {frame_rate} fps (int: {frame_rate_int})\n"
+            f"Number of frames: {frames_number}\n"
             f"Audio duration: {audio_duration}"
         )
 
-        # Normal outputs for other nodes
-        result = (frame_rate, num_frames, audio_duration)
+        result = (frame_rate, frame_rate_int, frames_number, audio_duration)
 
-        # "ui" is passed to the frontend and becomes `message.text`
         return {
             "ui": {
                 "text": (display_text,),

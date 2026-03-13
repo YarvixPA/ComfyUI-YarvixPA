@@ -3,6 +3,24 @@ from typing import Any
 import torch
 
 
+class AnyType(str):
+    """
+    A special class that is always equal in not equal comparisons.
+    This is the standard trick used by ComfyUI custom nodes to accept
+    any data type as input, bypassing type validation.
+    """
+
+    def __eq__(self, _) -> bool:
+        return True
+
+    def __ne__(self, __value: object) -> bool:
+        return False
+
+
+# Wildcard type instance — passes all type checks
+ANY_TYPE = AnyType("*")
+
+
 class ShowAnyDataType:
     """
     Node to display information about any incoming data type.
@@ -15,9 +33,8 @@ class ShowAnyDataType:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                # "*" (wildcard) accepts any data type
                 "ANY": (
-                    "*",
+                    ANY_TYPE,
                     {
                         "forceInput": True,
                         "placeholder": "Connect INT, FLOAT, STRING or any data type",
@@ -25,7 +42,6 @@ class ShowAnyDataType:
                 ),
             },
             "hidden": {
-                # Hidden inputs to store information in PNG info
                 "unique_id": "UNIQUE_ID",
                 "extra_pnginfo": "EXTRA_PNGINFO",
             },

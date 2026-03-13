@@ -65,9 +65,32 @@ function setupResolutionWidget(node, app, allowCreate) {
     if (el) {
         el.readOnly = true;
         el.style.fontSize = "12px";
-        el.style.resize = "none";   
-        el.style.overflow = "auto";
+        el.style.resize = "none";
+        el.style.overflow = "hidden";
     }
+}
+
+/**
+ * Auto-ajusta la altura del textarea para mostrar todo el contenido
+ * y recalcula la altura del nodo (sin cambiar el ancho).
+ */
+function autoResizeWidget(node) {
+    const widget = node.resolutionWidget;
+    if (!widget) return;
+
+    const el = widget.inputEl;
+    if (!el) return;
+
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+
+    const lines = (widget.value || "").split("\n").length;
+    widget.computedHeight = Math.max(lines * 18 + 16, 58);
+
+    const currentWidth = node.size[0];
+    const neededHeight = node.computeSize()[1];
+    node.setSize([currentWidth, neededHeight]);
+    node.setDirtyCanvas(true, true);
 }
 
 app.registerExtension({
@@ -131,7 +154,8 @@ app.registerExtension({
                 this.resolutionWidget.value = "No resolution data.";
             }
 
-            this.setDirtyCanvas(true, true);
+            // Auto-ajustar altura del widget al contenido
+            autoResizeWidget(this);
         };
     }
 });

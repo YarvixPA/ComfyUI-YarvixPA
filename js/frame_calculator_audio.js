@@ -6,10 +6,10 @@ const WIDGET_NAME = "frame_info_display";
 const PLACEHOLDER_TEXT = "Waiting for frame calculation...";
 
 /**
- * Normalizes the info widget:
- *  - finds all widgets that are "ours" (same name or same placeholder),
- *  - keeps only the first one, removes duplicates,
- *  - optionally creates one if none exists.
+ * Normaliza el widget de info:
+ *  - encuentra todos los widgets "nuestros" (mismo nombre o mismo placeholder),
+ *  - mantiene solo el primero y borra duplicados,
+ *  - opcionalmente crea uno si no existe.
  */
 function setupFrameInfoWidget(node, app, allowCreate) {
     if (!node.widgets) {
@@ -18,7 +18,6 @@ function setupFrameInfoWidget(node, app, allowCreate) {
 
     let firstIndex = -1;
 
-    // Detect all our candidate widgets and remove duplicates
     for (let i = 0; i < node.widgets.length; i++) {
         const w = node.widgets[i];
         const isOurs =
@@ -29,20 +28,17 @@ function setupFrameInfoWidget(node, app, allowCreate) {
 
         if (isOurs) {
             if (firstIndex === -1) {
-                firstIndex = i; // keep this one
+                firstIndex = i;
             } else {
-                // Remove duplicates
                 node.widgets.splice(i, 1);
                 i--;
             }
         }
     }
 
-    // If we found an existing widget, bind to it
     if (firstIndex !== -1) {
         node.frameInfoWidget = node.widgets[firstIndex];
     } else if (allowCreate) {
-        // Create a new widget at the end (below fps)
         const created = ComfyWidgets["STRING"](
             node,
             WIDGET_NAME,
@@ -60,15 +56,36 @@ function setupFrameInfoWidget(node, app, allowCreate) {
         node.frameInfoWidget = created;
     }
 
-    // Apply styles if we have a widget
     const el = node.frameInfoWidget?.inputEl;
     if (el) {
         el.readOnly = true;
         el.style.fontSize = "12px";
-        el.style.resize = "none";   // prevent manual resize
-        el.style.overflow = "auto"; // scroll if needed
-        // Height is controlled by Comfy/LiteGraph; we only tweak width in onResize
+        el.style.resize = "none";
+        el.style.overflow = "hidden";
     }
+}
+
+/**
+ * Auto-ajusta la altura del textarea para mostrar todo el contenido
+ * y recalcula la altura del nodo.
+ */
+function autoResizeWidget(node) {
+    const widget = node.frameInfoWidget;
+    if (!widget) return;
+
+    const el = widget.inputEl;
+    if (!el) return;
+
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+
+    const lines = (widget.value || "").split("\n").length;
+    widget.computedHeight = Math.max(lines * 18 + 16, 58);
+
+    const currentWidth = node.size[0];
+    const neededHeight = node.computeSize()[1];
+    node.setSize([currentWidth, neededHeight]);
+    node.setDirtyCanvas(true, true);
 }
 
 app.registerExtension({
@@ -78,35 +95,30 @@ app.registerExtension({
         if (nodeData.name !== NODE_CLASS_NAME) return;
 
         //
-        // 1. Node created (new or duplicated)
+        // 1. Nodo creado (nuevo o duplicado)
         //
         const onNodeCreated = nodeType.prototype.onNodeCreated;
         nodeType.prototype.onNodeCreated = function () {
             if (onNodeCreated) onNodeCreated.apply(this, arguments);
-
-            // Allow creation (new node) and also normalize any leftover widgets
             setupFrameInfoWidget(this, app, true);
         };
 
         //
-        // 2. Node configured (loaded from JSON / copy-paste)
+        // 2. Nodo configurado (cargado desde JSON / copy-paste)
         //
         const original_onConfigure = nodeType.prototype.onConfigure;
         nodeType.prototype.onConfigure = function (info) {
             if (original_onConfigure) original_onConfigure.apply(this, arguments);
-
-            // Widgets come from JSON: normalize & bind, create if missing
             setupFrameInfoWidget(this, app, true);
         };
 
         //
-        // 3. Adjust widget width when the node is resized
+        // 3. Ajustar ancho del widget cuando se redimensiona el nodo
         //
         const original_onResize = nodeType.prototype.onResize;
         nodeType.prototype.onResize = function (size) {
             if (original_onResize) original_onResize.apply(this, arguments);
 
-            // Do not create new widgets here; only reuse & clean duplicates
             setupFrameInfoWidget(this, app, false);
             if (!this.frameInfoWidget) return;
 
@@ -120,26 +132,22 @@ app.registerExtension({
         };
 
         //
-        // 4. Update widget content when the node receives data
+        // 4. Actualizar el contenido del widget cuando el nodo recibe datos
         //
         const onExecuted = nodeType.prototype.onExecuted;
         nodeType.prototype.onExecuted = function (message) {
             if (onExecuted) onExecuted.apply(this, arguments);
 
-            // Reuse existing widget and clean duplicates if any
             setupFrameInfoWidget(this, app, false);
             if (!this.frameInfoWidget) return;
 
-            // From Python:
-            // return { "ui": { "text": (display_text,) }, "result": (...) }
-            // → message.text in the frontend
             if (message?.text && message.text.length > 0) {
                 this.frameInfoWidget.value = message.text;
             } else {
                 this.frameInfoWidget.value = "No data received.";
             }
 
-            this.setDirtyCanvas(true, true);
+            autoResizeWidget(this);
         };
     }
 });
